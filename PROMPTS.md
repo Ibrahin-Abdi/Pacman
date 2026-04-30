@@ -25,6 +25,7 @@ I want to get the ghosts moving now. Can you add logic to GameModel.java so the 
 
 
 Prompt 8 — Expanding the Maze and Fixing "Off-Track" Movement
+
 Error Observed--The maze is too small (only one lane) and it’s possible to actully move off the tracks because the collision checking is a bit loose and too wonky. Can you update the maze array or size which one is mor ecorrect in GameModel.java to be a relative wide grid  -20x20- that looks more like the real Pac-Man level with intersections and boxes? Also, make the movement logic so Pac-Man stays perfectly centered in the lanes. He shouldn't be able to turn unless he is exactly at an intersection, which should stop him from clipping into walls."
 
 
@@ -45,6 +46,7 @@ Two things. First, the ghosts are moving too fast and I can't dodge them so can 
 
 Prompt 13 — through Tunnel 
 In the real Pac-Man game, if you walk off the left edge of the map you come out on the right side, and vice versa. Can you add this tunnel effect to GameModel.java? When Pac-Man's position goes past the right edge of the grid, teleport him to the left edge, and the same in reverse. Do the same for the ghosts too so they can also use the tunnel to chase me.
+
 Error Observed: The tunnel wrapping works on the left side because if I walk off the left edge I appear on the right  but the right side doesn't work at all. I just get stuck at the right wall and nothing happens I also observed its not only me but the Ghost as well experince this. Can you fix it so both sides work?
 
 Prompt 14 — Completion Timer & Leaderboard
