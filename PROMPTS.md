@@ -26,13 +26,15 @@ I want to get the ghosts moving now. Can you add logic to GameModel.java so the 
 
 Prompt 8 — Expanding the Maze and Fixing "Off-Track" Movement
 
-Error Observed--The maze is too small (only one lane) and it’s possible to actully move off the tracks because the collision checking is a bit loose and too wonky. Can you update the maze array or size which one is mor ecorrect in GameModel.java to be a relative wide grid  -20x20- that looks more like the real Pac-Man level with intersections and boxes? Also, make the movement logic so Pac-Man stays perfectly centered in the lanes. He shouldn't be able to turn unless he is exactly at an intersection, which should stop him from clipping into walls."
+Error Observed--The maze is too small (only one lane) and it’s possible to actully move off the tracks because the collision checking is a bit loose and too wonky. Can you update the maze array or size which one is mor ecorrect in GameModel.java to be a relative wide grid  -20x20- that looks more like the real Pac-Man level with intersections and boxes? Also, make the movement logic so Pac-Man stays perfectly centered in the lanes. He shouldn't be able to turn unless he is exactly at an intersection, which should stop him from clipping into walls.
 
 
 
 Prompt 9 — Mouth Direction and More Enemies
-Error Observed: Pac-Man is always facing right, even when moving left or up. Also, the ghosts are overlapping and moving off the grid. So Can you update GameView.java so Pac-Man’s mouth faces the direction he is actually moving? Also, let's add 4 ghosts total. Make sure each ghost starts in the center of the maze and has logic to stay inside the hallways just like Pac-Man, so they don't go flying off into the blue walls or area to be sure make sure to look at any things/logic that would break and try to fix that."
+Error Observed: Pac-Man is always facing right, even when moving left or up. Also, the ghosts are overlapping and moving off the grid. So Can you update GameView.java so Pac-Man’s mouth faces the direction he is actually moving? Also, let's add 4 ghosts total. Make sure each ghost starts in the center of the maze and has logic to stay inside the hallways just like Pac-Man, so they don't go flying off into the blue walls or area to be sure make sure to look at any things/logic that would break and try to fix that.
 
+image + problem Observed: I had a problem where when the game starts the enemies teleport to the player(pac man) which instantly ends the round I prompted the AI to make sure they start in their realtive postion aka spwan point and move accordingly and no logic should be broken.
+![alt text](image.png)
 
 Prompt 10 — Pause, Reset, and High Score
 Feature Request- Adding game controls and a way to track the best score. Aswell I need a way to stop the game. Can you add a 'Pause' feature using the P key and a 'Reset' feature using the R key? Update the GameController to listen for these. Also, add a highScore variable to GameModel.java. Every time the game ends, if the current score is higher than the high score, save it and display it at the bottom next to the current score."
@@ -52,9 +54,6 @@ Error Observed: The tunnel wrapping works on the left side because if I walk off
 Prompt 14 — Completion Timer & Leaderboard
 When I eat every dot and beat the level I want a leaderboard to pop up. Add a timer to GameModel.java that starts when the game starts and stops when the last dot is eaten. Store the top 5 completion times. In GameView.java, when the game is won, show a leaderboard screen in the center of the maze listing those top 5 times in seconds, ranked 1st to 5th. Make it look clean
 
-Problem: In the Pac-Man game, the enemy ghosts do not properly chase the player and do not correctly wrap through tunnels — instead of reappearing on the opposite side, they disappear. Additionally, all three difficulty levels must function correctly with consistent enemy behavior.
-Solution: Update the enemy movement logic to actively track and move toward the player's position, implement the same tunnel-wrap collision detection for enemies
+Prompt 15 , add all three difficulty of easy mid and hard levels and that must function correctly with consistent enemy behavior and adjuste it where the easy mode has slower as well as fewer enimes.
+worked perfect
 
-
-![alt text](image.png)
- that already works for the player, and ensure all three difficulty levels apply the corrected chase and tunnel behavior with appropriately scaled enemy speed or aggression.
